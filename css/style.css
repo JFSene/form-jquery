@@ -1,11 +1,11 @@
 body {
     background-color: lightgrey;
-    margin: 150px, 100px, 150px, 100px;
-    padding-top: 30px;
     align-content: center;
 }
 
 button {
+    margin-top: 25px;
+    margin-bot: 25px;
     width: 200px;
     height: 40px;
     border-radius: 10px;
@@ -14,12 +14,9 @@ button {
     font-size: medium;
 }
 
-label {
-    color: gray;
-}
-
-#formulario {
-    padding: 35px;
+.row {
+    margin: 25px;
+    width: 600px;
 }
 
 #btnSalvar {
@@ -32,4 +29,17 @@ label {
     border-color: red;
     border-width: 2px;
     background-color: red;
+    margin-left: 10px;
+}
+
+.fone {
+    margin-left: -10px;
+}
+
+#btnTelefones{
+    width: 150px;
+    height: 40px;
+    border-color: blue;
+    border-width: 2px;
+    background-color: blue;
 }
