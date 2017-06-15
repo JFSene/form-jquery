@@ -16,60 +16,63 @@
 
 <body>
     <div id="container">
-        <form action="#" method="post" class="validate">
+        <div>
+            <span id="validate" required></span>
+        </div>
+        <form action="" method="post" class="form-principal" id="form-principal">
             <div class="txtNome">
                 <div><label for="txtNome">*Nome:</label></div>
-                <input type="nome" name="txtNome" id="txtNome" class="nome validate required" />
+                <input type="nome" name="txtNome" id="txtNome" class="nome" required minlength="3" maxlength="40" />
             </div>
-            <div class="txtCpf">
-                <div><label for="txtCpf">*CPF:</label></div>
-                <input type="text" name="txtCpf" id="cpf" class="cpf validate span" placeholder="CPF" />
+            <div class="txtCpf ">
+                <div><label for="txtCpf ">*CPF:</label></div>
+                <input type="cpf " name="txtCpf " id="txtCpf " class="cpf" required validate />
             </div>
-            <div class="txtRg">
-                <div><label for="txtRg">RG:</label></div>
-                <input type="text" name="rg" id="validate" class="rg numeric required" placeholder="RG" />
+            <div class="txtRg ">
+                <div><label for="txtRg ">RG:</label></div>
+                <input type="rg" name="txtRg" id="txtRg" class="rg" required />
             </div>
-            <div class="txtDataNascimento">
-                <div><label for="data">Data de Nascimento:</label></div>
-                <input type="data" name="data" id="data" class="data numeric" placeholder="dd/mm/aaaa" />
+            <div class="txtDataNascimento ">
+                <div><label for="data ">Data de Nascimento:</label></div>
+                <input type="data " name="data " id="data " class="data numeric " placeholder="dd/mm/aaaa " />
             </div>
-            <div class="txtDataCadastro">
-                <div><label for="txtDataCadastro">Data de Cadastro:</label></div>
-                <input type="data" name="data" id="data" class="data required" placeholder="dd/mm/aaaa" />
+            <div class="txtDataCadastro ">
+                <div><label for="txtDataCadastro ">Data de Cadastro:</label></div>
+                <input type="data " name="data " id="data " class="data required " placeholder="dd/mm/aaaa " />
             </div>
             <div class="comboSexo ">
-                <div><label for="comboSexo">Sexo:</label></div>
-                <select name="comboSexo" id="comboSexo" class="comboSexo"> 
-							<option value="item1">Masculino
-							<option value="item2">Feminino 
-							<option value="item3">Não Informar 
+                <div><label for="comboSexo ">Sexo:</label></div>
+                <select name="comboSexo " id="comboSexo " class="comboSexo "> 
+							<option value="item1 ">Masculino
+							<option value="item2 ">Feminino 
+							<option value="item3 ">Não Informar 
 			</select>
             </div>
-            <div class="txtReservista">
-                <div><label for="txtReservista"> Reservista:</label></div>
+            <div class="txtReservista ">
+                <div><label for="txtReservista "> Reservista:</label></div>
                 <input type="text " name="reservista " id="reservista " class="reservista " placeholder=" Reservista " />
             </div>
-            <div class="comboTelefone">
+            <div class="comboTelefone ">
                 <div><label for="txtCpf ">Telefone:</label></div>
-                <select name="comboTelefone" id="comboTelefone" class="comboTelefone"><option value="item1">Fixo 
-							<option value="item2">Celular </select><input type="text " name="fone " id="fone " class="fone " placeholder=" " />
+                <select name="comboTelefone " id="comboTelefone " class="comboTelefone "><option value="item1 ">Fixo 
+							<option value="item2 ">Celular </select><input type="text " name="fone " id="fone " class="fone " placeholder=" " />
             </div>
             <div class="txtCpf ">
                 <div><label for="txtCpf ">Data:</label></div>
                 <input type="text " name="cpf " id="cpf " class="cpf " placeholder="CPF " />
             </div>
-            <button type="submit" class="btnSalvar" id="btnSalvar">Salvar</button>
-            <button class="btnCancelar" id="reset" name="btnSalvar">cancelar</button>
+            <button class="btnSalvar" id="btnSalvar">Salvar</button>
+            <button class="btnCancelar " id="btnCancelar">Cancelar</button>
         </form>
     </div>
 
     <script>
         $(document).ready(function() {
 
-            $('#btnCancelar').click(function() {
+            $('.btnCancelar').click(function() {
                 limparCampos();
             });
-            $('#btnSalvar').click(function() {
+            $('.btnSalvar').click(function() {
                 validarCamposObrigatorios();
             });
         });
@@ -87,7 +90,7 @@
         }
 
         function validarCamposObrigatorios() {
-            if ($('#txtCpf').val() == "") {
+            if ($('#txtCpf').val() == " ") {
                 $('#txtCpf').marcarIvalido();
             } else {
                 $('#txtCpf').removerIvalido();
@@ -121,5 +124,7 @@
     </script>
 
 </body>
+
+</html>
 
 </html>

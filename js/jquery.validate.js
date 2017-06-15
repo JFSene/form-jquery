@@ -48,9 +48,10 @@ try {
 
     //$('head').append('<link href="css/validate.css" type="text/css" media="screen" rel="stylesheet" />');
     /* button style - comentar alinha abaixo para omitir o style do button */
-    $("head").append(
-      '<link href="css/button.css" type="text/css" media="screen" rel="stylesheet" />'
-    );
+    $("head")
+      .append
+      //'<link href="css/button.css" type="text/css" media="screen" rel="stylesheet" />'
+      ();
     /* botao reset - limpa forms*/
     $(".reset").live("click", function() {
       $("form").attr("onsubmit", "return false");
