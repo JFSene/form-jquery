@@ -35,7 +35,7 @@ try {
     /* mascara cpf */
     $(".cpf").mask("999.999.999-99");
     /* mascara rg */
-    $(".rg").mask("9.999.99-9a");
+    $(".rg").mask("9.999.99-99");
     /* mascara cnpj */
     $(".cnpj").mask("99.999.999/9999-99");
     /* mascara placa */
@@ -54,11 +54,11 @@ try {
       ();
     /* botao reset - limpa forms*/
     $(".reset").live("click", function() {
-      $("form").attr("onsubmit", "return false");
+      $("form").attr("onsubmit", "return true");
       $("form").find("*").val("");
       $("form").find("*").removeClass("invalid").removeClass("valid");
       $("form").find("span").fadeOut(10);
-      return false;
+      return true;
     });
     /* Aplicando Placeholder com texto do SPAN */
     $(this).find(".required").each(function() {
