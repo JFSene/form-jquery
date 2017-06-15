@@ -1,0 +1,35 @@
+body {
+    background-color: lightgrey;
+    margin: 150px, 100px, 150px, 100px;
+    padding-top: 30px;
+    align-content: center;
+}
+
+button {
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    font-size: medium;
+}
+
+label {
+    color: gray;
+}
+
+#formulario {
+    padding: 35px;
+}
+
+#btnSalvar {
+    border-color: green;
+    border-width: 2px;
+    background-color: green;
+}
+
+#btnCancelar {
+    border-color: red;
+    border-width: 2px;
+    background-color: red;
+}
