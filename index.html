@@ -64,7 +64,7 @@
             </div>
             <div class="botao col s12 m2" id="myform">
                 <a class="btn-floating btn-large waves-effect waves-light red" id="btn_createList"><i class="material-icons">add</i></a>
-            </div> 
+            </div>
             <button id="btnSalvar" class="btnSalvar btn validate">Salvar</button>
             <button id="btnCancelar" class="btnCancelar btn validate">Cancelar</button>
         </form>
@@ -72,7 +72,7 @@
 
     <script>
         $(document).ready(function() {
-          
+
             $('.datepicker').pickadate({
                 selectMonths: true, // Creates a dropdown to control month
                 selectYears: 15, // Creates a dropdown of 15 years to control yea
@@ -84,10 +84,25 @@
                 validarCamposObrigatorios();
             });
         });
-var hiddenBox = $( "#banner-message" );
-$( "#btn" ).on( "click", function( event ) {
-  hiddenBox.show();
-});
+        $(function() {
+            $("#txtNome").keydown(function(e) {
+                if (e.shiftKey || e.ctrlKey || e.altKey) {
+                    e.preventDefault();
+                } else {
+                    var key = e.keyCode;
+                    if (!(
+                            key == 8 ||
+                            key == 32 ||
+                            key == 46 ||
+                            (key >= 35 && key <= 40) ||
+                            (key >= 65 && key <= 90)
+                        )) {
+                        e.preventDefault();
+                    }
+                }
+            });
+        });
+
         function limparCampos() {
             $('#txtNome').val('');
             $('#txtCpf').val('');
@@ -133,7 +148,7 @@ $( "#btn" ).on( "click", function( event ) {
             }
         }
     </script>
-    
+
     <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>
 
